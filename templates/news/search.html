@@ -1,0 +1,102 @@
+{% extends 'base/font_base.html' %}
+{% load news_date_filter %}
+
+{% block title %}
+  搜索页
+{% endblock %}
+
+{% block link %}
+  <link rel="stylesheet" href="/static/css/news/search.css">
+{% endblock %}
+
+{% block main %}
+  <!-- main start -->
+  <main id="main">
+    <div class="w1200 clearfix">
+      <!-- main-contain start  -->
+      <div class="main-contain ">
+        <!-- search-box start -->
+        <div class="search-box">
+          <form action="" style="display: inline-flex;">
+              {% if q %}
+                <input type="search" placeholder="请输入要搜索的内容" name="q" class="search-control" value="{{ q }}">
+                  {% else %}
+                  <input type="search" placeholder="请输入要搜索的内容" name="q" class="search-control">
+              {% endif %}
+            <input type="submit" value="搜索" class="search-btn">
+          </form>
+          <!-- 可以用浮动 垂直对齐 以及 flex  -->
+        </div>
+        <!-- search-box end -->
+        <!-- content start -->
+        <div class="content">
+            {% if result_newses %}
+                <!-- search-list start -->
+          <div class="search-result-list">
+            <h2 class="search-result-title">
+              搜索结果 <span style="font-weight: 300;">{{ result_newses.count }}</span>
+            </h2>
+            <ul class="news-list">
+                {% for result_news in result_newses %}
+                    <li class="news-item clearfix">
+                <a href="javascript:void(0);" class="news-thumbnail" target="_blank">
+                  <img src="{{ result_news.thumbnail_url }}">
+                </a>
+                <div class="news-content">
+                  <h4 class="news-title"><a href="javascript:void(0);">{{ result_news.title }}</a></h4>
+                  <p class="news-details">{{ result_news.desc }}</p>
+                  <div class="news-other">
+                    <span class="news-type">{{ result_news.tag.name }}</span>
+                    <span class="news-time">{{ result_news.pub_time|date_format }}</span>
+                    <span class="news-author">{{ result_news.author.username }}</span>
+                  </div>
+                </div>
+              </li>
+                {% endfor %}
+            </ul>
+          </div>
+          <!-- search-list end -->
+            {% endif %}
+          {% if h_newses %}
+            <!-- news-contain start -->
+          <div class="news-contain">
+            <div class="hot-recommend-list">
+              <h2 class="hot-recommend-title">热门推荐</h2>
+              <ul class="news-list">
+                  {% for h_news in h_newses %}
+                    <li class="news-item clearfix">
+                  <a href="" class="news-thumbnail">
+                    <img src="{{ h_news.news.thumbnail_url }}">
+                  </a>
+                  <div class="news-content">
+                    <h4 class="news-title">
+                      <a href="javascript:void(0);">{{ h_news.news.title }}</a>
+                    </h4>
+                    <p class="news-details">
+                    </p>
+                    <div class="news-other">
+                      <span class="news-type">{{ h_news.news.tag.name }}</span>
+                      <span class="news-time">{{ h_news.news.pub_time|date_format }}</span>
+                      <span class="news-author">{{ h_news.news.author.username }}</span>
+                    </div>
+                  </div>
+                </li>
+                  {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <!-- news-contain end -->
+          {% endif %}
+        </div>
+        <!-- content end -->
+      </div>
+      <!-- main-contain  end -->
+      {% include 'base/side_base.html' %}
+    </div>
+  </main>
+  <!-- main end -->
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}
