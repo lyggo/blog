@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="127.0.0.1" id="7c63809e-bcd0-48bb-8234-c3cdec6e3fdc" port="22" customName="ssh://pyvip@127.0.0.1:22/home/pyvip/.virtualenvs/djT/bin/python3.6" nameFormat="CUSTOM">
+        <option name="customName" value="ssh://pyvip@127.0.0.1:22/home/pyvip/.virtualenvs/djT/bin/python3.6" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.views import View
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
-from tanzhou_django_project import settings
+from blog import settings
 from utils import json_status
 from apps.news.models import NewsTag, News, NewsHot,NewsBanner
 from qiniu import Auth
