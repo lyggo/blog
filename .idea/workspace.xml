@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ccada6c-7452-4e75-a5a1-4de9b9fcf6cb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +190,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539239511931</updated>
-      <workItem from="1712037946804" duration="354000" />
+      <workItem from="1712037946804" duration="403000" />
     </task>
     <servers />
   </component>
@@ -215,5 +216,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="664" y="451" key="publish.login" timestamp="1712038342687">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="664" y="451" key="publish.login/0.40.1920.1040@0.40.1920.1040" timestamp="1712038342687" />
   </component>
 </project>
